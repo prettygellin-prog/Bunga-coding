@@ -1,0 +1,16 @@
+<div class="flower">
+  <div class="petal"></div><div class="petal"></div>
+  <div class="petal"></div><div class="petal"></div>
+  <div class="center"></div>
+</div>
+<style>
+  body { display: flex; justify-content: center; align-items: center; height: 100vh; background: #1a1a1a; margin: 0; }
+  .flower { position: relative; animation: putar 10s linear infinite; }
+  .petal { width: 60px; height: 100px; background: #ff69b4; border-radius: 50% 50% 20% 20%; position: absolute; top: -100px; left: -30px; transform-origin: bottom center; box-shadow: 0 0 15px rgba(255,105,180,0.5); }
+  .petal:nth-child(2) { transform: rotate(90deg); }
+  .petal:nth-child(3) { transform: rotate(180deg); }
+  .petal:nth-child(4) { transform: rotate(270deg); }
+  .center { width: 50px; height: 50px; background: #ffd700; border-radius: 50%; position: absolute; top: -25px; left: -25px; box-shadow: inset 0 0 10px orange; }
+  @keyframes putar { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+          </style>
+
