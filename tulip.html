@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tulip Jumbo Asli</title>
+<style>
+body { background-color: #000; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; overflow: hidden; color: white; font-family: Arial; }
+#tulip {
+lebar: 200 piksel; /*Ukuran awal */
+transisi: semua 5 kemudahan masuk-keluar; /* Durasi mekar perlahan */
+kursor: penunjuk;
+filter:drop-shadow(0 0 20px rgba(255,192,203,0.5));
+}
+
+/* Efek saat Mekar & Jumbo */
+.bunga {
+transformasi: skala(3.5); /* Jadi Jumbo banget! */
+filter:drop-shadow(0 0 50px #ff4d6d);
+}
+
+.teks { position: absolute; top: 20px; opacity: 0.8; }
+</style>
+</head>
+<body>
+
+<div class="teks">Klik bunganya untuk memekarkan & memutar musik</div>
+
+<!-- Pastikan nama file gambarmu adalah bunga.png -->
+<img src="tulip.jpg" id="tulip" onclick="startAction()">
+
+<audio id="lagu">
+<source src="https://files.catbox.moe/as1c3o.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+fungsi startAction() {
+// Membuat bunga jadi jumbo
+document.getElementById("tulip").classList.add("bloom");
+// Memutar musik
+document.getElementById("lagu").play();
+}
+</script>
+</body>
+</html>
+
